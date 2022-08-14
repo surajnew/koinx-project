@@ -29,15 +29,16 @@ ServiceLocator.prototype.register = function () {
     .loadModules(["./app/providers/*/index.js"], {
       formatName: (name, descriptor) => descriptor.value.name,
       resolverOptions: {
-        register: asClass,
         lifetime: Lifetime.SINGLETON,
+        register: asClass
       },
     })
     .loadModules(['./app/service/*.js','./app/models/*.js'],{
       formatName:"camelCase",
       resolverOptions: {
+        lifetime: Lifetime.SINGLETON,
         register: asClass,
-        lifetime: Lifetime.SINGLETON
+
       }
     })
    .register({
