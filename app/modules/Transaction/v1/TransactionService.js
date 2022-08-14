@@ -34,7 +34,7 @@ class TransactionService {
         startblock: 0,
         endblock: 99999999,
         page: pageNo,
-        offset: 10,
+        offset: 50,
         sort: "desc",
         apikey: process.env.API_KEY,
       },

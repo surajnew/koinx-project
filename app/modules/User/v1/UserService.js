@@ -14,7 +14,6 @@ class UserService {
 
   async createAccount(body) {
     const user = await this.mongoService.create(this.modelName, body);
-    console.log(user);
     let transData = await this.transactionService.getTransactionData(user);
     await this.updateUserEndblcok(user, transData);
     await this.getUserBalance(user);
