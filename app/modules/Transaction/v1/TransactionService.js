@@ -26,8 +26,6 @@ class TransactionService {
   }
 
   async getTransactionFromEtherScan(pageNo = 1, user) {
-    console.log(user.address)
-    console.log(process.env.API_KEY)
     const response = await this.axios.get("https://api.etherscan.io/api", {
       params: {
         module: "account",
@@ -36,7 +34,7 @@ class TransactionService {
         startblock: 0,
         endblock: 99999999,
         page: pageNo,
-        offset: 100,
+        offset: 10,
         sort: "desc",
         apikey: process.env.API_KEY,
       },

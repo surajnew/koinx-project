@@ -27,7 +27,7 @@ ServiceLocator.prototype.register = function () {
       }
     )
     .loadModules(["./app/providers/*/index.js"], {
-      formatName: (name, descriptor) =>  descriptor.value.name,
+      formatName: (name, descriptor) => descriptor.value.name,
       resolverOptions: {
         register: asClass,
         lifetime: Lifetime.SINGLETON,
@@ -60,9 +60,9 @@ ServiceLocator.prototype.register = function () {
 
 };
 
-ServiceLocator.prototype.get=function(depedencyName){
+ServiceLocator.prototype.get=function(dependencyName){
   try {
-    return this.container.resolve(depedencyName)
+    return this.container.resolve(dependencyName)
   } catch (error) {
     throw error
   }

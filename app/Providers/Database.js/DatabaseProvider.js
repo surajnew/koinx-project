@@ -20,7 +20,7 @@ class Database {
 
       connection.on("connected", () => {
         console.log("database Connected");
-        return resolve();
+        return resolve('');
       });
 
       connection.on("disconnected", (err) => {
