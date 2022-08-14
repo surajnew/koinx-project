@@ -32,7 +32,7 @@ class Database {
       let files = fs.readdirSync(modelsPath);
       for (let file of files) {
         let filename = file.split(".")[0];
-        require(`${modelsPath}\\${filename}`);
+        require(`${modelsPath}/${filename}`);
       }
 
       for (let model of this.models) {
