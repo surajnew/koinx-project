@@ -1,6 +1,6 @@
 # koinx-project
 ## project-flow 
-
+## project is hosted on ```https://koin-x.herokuapp.com```
 ###### create-user-account
 -this api will create user account
 -it fetches Trans. data from etherscan and stores in db 
