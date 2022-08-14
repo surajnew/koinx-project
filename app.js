@@ -8,13 +8,11 @@ const errorHandler = serviceLocator.get("errorHandler");
 const jobServer = require("./job_server");
 const bodyParser = require("body-parser");
 const Database = serviceLocator.get("Database");
-
-// jobServer();
+jobServer();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
 
 //register routes
 route(app, serviceLocator);
