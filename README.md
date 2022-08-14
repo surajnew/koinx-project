@@ -1,7 +1,7 @@
 # koinx-project
-##project-flow 
+## project-flow 
 
-#######create-user-account
+####### create-user-account
 -this api will create user account
 -it fetches Trans. data from etherscan and stores in db 
 -also fetches user balance
@@ -15,7 +15,7 @@ body ex:
 }
 ```
 
-######1st task .
+###### 1st task .
 -create route where api will get userid as input and related transactions should be returned 
 use
 ``` 
@@ -23,11 +23,11 @@ https://koin-x.herokuapp.com/api/transaction?userId=62f8d7fd515eef511ba85c8d&add
 ```
 it will return list of transaction(paginated)
 
-#######2nd taks.
+####### 2nd taks.
 -create system for taking ether price every 10 min 
 for this task I have created job using node cron which stores data in ethereum model.
 
-#######3 rd task 
+####### 3 rd task 
 -take address as input and create get route for getting ether price and user balance by calculating it from trans. data of etherscan.
 
 -1) so initially when user creates his account at that time i am fetching the user balance from etherscan api
