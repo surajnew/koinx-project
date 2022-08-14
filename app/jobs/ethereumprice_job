@@ -1,0 +1,26 @@
+const serviceLocator = require("../lib/service_locator");
+const axios = serviceLocator.get("axios");
+const Database = serviceLocator.get("mongoService");
+
+const ethereumPrice = function EthereumPrice() {
+  this.taskName = "ETHEREUM_PRICE_JOB";
+
+  this.getEthereumPrice = async () => {
+    const response = await axios.get("https://api.coingecko.com/api/v3/simple/price", {
+      params: {
+        ids:"ethereum",
+        vs_currencies:"inr"
+      },
+    });
+     return response.data.ethereum.inr;
+  };
+
+  this.taskHandler = async () => {
+    console.log("ETHEREUM_PRICE_JOB started");
+    const price = await this.getEthereumPrice();
+     let obj={price:price}
+    await Database.create("Ethereum", obj);
+  
+  };
+};
+module.exports = ethereumPrice;
