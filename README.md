@@ -16,8 +16,8 @@ body ex:
 ```
 
 ###### 1st task .
--create route where api will get userid as input and related transactions should be returned 
-use
+-create route where api will get address as input and related transactions should be returned 
+
 ``` 
 https://koin-x.herokuapp.com/api/transaction?userId=62f8d7fd515eef511ba85c8d&address=0xce94e5621a5f7068253c42558c147480f38b5e0d&page=0
 ```
