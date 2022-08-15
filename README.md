@@ -35,7 +35,9 @@ for this task I have created job using node cron which stores data in ethereum m
 -2) after that . I have written job which will run every day at midnight and will extract the transaction data of the users who are aleready registered on our platform.
 -and while retriving transactin data i am updating the user balance based on to and from as per problem statment 3.
 
-'''https://koin-x.herokuapp.com/api/balance?userId=62f8d7fd515eef511ba85c8d&address=0xce94e5621a5f7068253c42558c147480f38b5e0d '''
+```
+https://koin-x.herokuapp.com/api/balance?userId=62f8d7fd515eef511ba85c8d&address=0xce94e5621a5f7068253c42558c147480f38b5e0d 
+'''
 this api will return etherprice and balance
 
 ## Note
