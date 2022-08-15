@@ -37,7 +37,7 @@ for this task I have created job using node cron which stores data in ethereum m
 
 ```
 https://koin-x.herokuapp.com/api/balance?userId=62f8d7fd515eef511ba85c8d&address=0xce94e5621a5f7068253c42558c147480f38b5e0d 
-'''
+```
 this api will return etherprice and balance
 
 ## Note
