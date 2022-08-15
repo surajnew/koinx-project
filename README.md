@@ -24,7 +24,7 @@ https://koin-x.herokuapp.com/api/transaction?userId=62f8d7fd515eef511ba85c8d&add
 it will return list of transaction(paginated)
 
 ###### 2nd taks.
--create system for taking ether price every 10 min 
+-create system for fetching ether price at every 10 min.  
 for this task I have created job using node cron which stores data in ethereum model.
 
 ###### 3 rd task 
