@@ -1,3 +1,5 @@
+//job for retrieving ethereumPrice after every 10 mins
+
 const serviceLocator = require("../lib/service_locator");
 const axios = serviceLocator.get("axios");
 const Database = serviceLocator.get("mongoService");

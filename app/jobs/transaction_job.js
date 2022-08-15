@@ -1,13 +1,9 @@
+
+//JOB for retriving the transaction every day & updating user balance base on transaction data.
+
 const serviceLocator = require("../lib/service_locator");
 const axios = serviceLocator.get("axios");
 const Database = serviceLocator.get("mongoService");
-
-// axios.interceptors.request.use((config) => {
-//   config.params = {
-//     ...config,
-//     apikey: process.env.API_KEY,
-//   };
-// });
 
 const transaction = function Transaction() {
   this.taskName = "TRANSACTIONS_JOB";
@@ -34,18 +30,7 @@ const transaction = function Transaction() {
     }
   };
 
-  // this.getUserBalance = async (address) => {
-  //   const response = await axios.get("https://api.etherscan.io/api", {
-  //     params: {
-  //       module: "account",
-  //       action: "balance",
-  //       address: address,
-  //       tag: "latest",
-  //       apikey: process.env.API_KEY,
-  //     },
-  //   });
-  //   return Number(response.data.result)
-  // };
+  
 
   this.updateUserEndblcok = async (user, dataArr) => {
     let letestTransData = dataArr[0];

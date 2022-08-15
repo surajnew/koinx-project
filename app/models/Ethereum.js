@@ -8,6 +8,5 @@ const ethereumSchema = new Schema({
     default:0
   },
 });
-// userSchema.set('toObject', { getters: true });
-// userSchema.set('toJSON', { getters: true });
+
 module.exports = mongoose.model("Ethereum", ethereumSchema);

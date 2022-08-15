@@ -24,6 +24,5 @@ const userSchema = new Schema(
     timestamps: true,
   }
 );
-// userSchema.set('toObject', { getters: true });
-// userSchema.set('toJSON', { getters: true });
+
 module.exports = mongoose.model("User", userSchema);

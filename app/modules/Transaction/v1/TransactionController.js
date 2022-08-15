@@ -13,6 +13,9 @@ class TransactionController {
       next(error);
     }
   }
+
+  //returns user transaction by taking address as query params
+
   async getTransactionByAddress(req, res, next) {
     try {
       const { query} = req;

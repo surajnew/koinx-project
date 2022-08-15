@@ -12,6 +12,9 @@ class UserService {
     return result;
   }
 
+//create user account and extracts all transaction data from etherscan and stores in db
+//get user balance .
+
   async createAccount(body) {
     const user = await this.mongoService.create(this.modelName, body);
     let transData = await this.transactionService.getTransactionData(user);
